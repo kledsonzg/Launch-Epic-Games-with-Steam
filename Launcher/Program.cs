@@ -8,22 +8,24 @@ namespace SteamLauncher
     {
         static void Main()
         {
-            Program epic = new Program();
-            epic.StopEpicProcess();
-
+            EpicProcess epicUtilities = new EpicProcess();
             IniFile settings = new IniFile("settings.ini");
-
+           
             int pauseTime = 0;
             string epicUrl = settings.Read("epicUrl", "Game Settings");
             string exeName = settings.Read("exeName", "Game Settings");
             int.TryParse(settings.Read("pauseTime", "Game Settings"), out pauseTime);
             pauseTime *= 1000;
+            bool isRunning = epicUtilities.IsRunning();
 
             if (String.IsNullOrEmpty(epicUrl) || String.IsNullOrEmpty(exeName) )
             {
                 System.Console.WriteLine("ERRO: É necessário o URL e o nome do Executável.");
                 return;
             }
+
+            if(isRunning)
+                epicUtilities.StopEpicProcess();
 
             ProcessStartInfo ps = new ProcessStartInfo(epicUrl);
             ps.UseShellExecute = true;
@@ -63,30 +65,23 @@ namespace SteamLauncher
             while(true){
                 Thread.Sleep(1000);
                 if (!gameProcesses[0].HasExited) continue;
-                Console.WriteLine("Fechando launcher...");            
 
-                epic.StopEpicProcess();
-                Thread.Sleep(3000);     
+                string logPrint = "Fechando launcher";
+
+                if(isRunning)
+                    logPrint += " e reabrindo a Epic Games.";
+                else logPrint += "...";
+
+                Console.WriteLine(logPrint);           
+
+                epicUtilities.StopEpicProcess();
+                Thread.Sleep(2000);
+
+                if(isRunning)
+                    epicUtilities.StartEpicProcess();
+
                 break;
             }            
-        }
-
-        Process StopEpicProcess()
-        {
-            Process mainProcess = null;
-            
-            Process[] process = Process.GetProcesses();
-            foreach (Process o in process)
-            {
-                if (o.ProcessName == "EpicGamesLauncher" ||
-                o.ProcessName == "EpicWebHelper" ||
-                o.ProcessName == "Inicializador da Epic Games")
-                {
-                    mainProcess = o;
-                    o.Kill();
-                }
-            }
-            return mainProcess;
         }
     }
 }
