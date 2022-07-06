@@ -13,6 +13,6 @@ da epic games seja identicado pela Steam! O que permite ao usuário acessar o pa
 Para resolver isso, é só executar o programa como administrador que você não terá mais problemas.
 
 #### Créditos:
-Site que possui a matéria de como a steam pode executar os jogos da Epic Games: [Seanz Writes](seanzwrites.com).
+Site que possui a matéria de como a steam pode executar os jogos da Epic Games: [Seanz Writes](https://seanzwrites.com).
 
 IniFile.cs: [Heiswayi Nrird](https://github.com/heiswayi).
