@@ -44,6 +44,7 @@ namespace Launch_Epic_Games_with_Steam
             this.searchUrl = new System.Windows.Forms.PictureBox();
             this.openInkFile = new System.Windows.Forms.OpenFileDialog();
             this.bckPanel = new System.Windows.Forms.Panel();
+            this.tutorialButton = new System.Windows.Forms.PictureBox();
             this.segundosLabel = new System.Windows.Forms.Label();
             this.timeToWaitLabel = new System.Windows.Forms.Label();
             this.timeBox = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@ namespace Launch_Epic_Games_with_Steam
             ((System.ComponentModel.ISupportInitialize)(this.searchExe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchUrl)).BeginInit();
             this.bckPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tutorialButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,9 @@ namespace Launch_Epic_Games_with_Steam
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Unispace", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(148, 321);
             this.button1.Name = "button1";
@@ -104,7 +109,7 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(148, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -116,7 +121,7 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(328, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 96);
+            this.pictureBox2.Size = new System.Drawing.Size(174, 84);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -128,7 +133,7 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(511, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(174, 96);
+            this.pictureBox3.Size = new System.Drawing.Size(174, 84);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -138,9 +143,9 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox4.BackColor = System.Drawing.Color.Navy;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(17, 106);
+            this.pictureBox4.Location = new System.Drawing.Point(75, 106);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(113, 47);
+            this.pictureBox4.Size = new System.Drawing.Size(55, 47);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -150,9 +155,9 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox5.BackColor = System.Drawing.Color.Navy;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(29, 239);
+            this.pictureBox5.Location = new System.Drawing.Point(75, 231);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(113, 49);
+            this.pictureBox5.Size = new System.Drawing.Size(55, 47);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
@@ -184,7 +189,7 @@ namespace Launch_Epic_Games_with_Steam
             this.searchExe.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.searchExe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchExe.Image = ((System.Drawing.Image)(resources.GetObject("searchExe.Image")));
-            this.searchExe.Location = new System.Drawing.Point(688, 239);
+            this.searchExe.Location = new System.Drawing.Point(679, 231);
             this.searchExe.Name = "searchExe";
             this.searchExe.Size = new System.Drawing.Size(55, 50);
             this.searchExe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,6 +200,7 @@ namespace Launch_Epic_Games_with_Steam
             // searchUrl
             // 
             this.searchUrl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.searchUrl.BackColor = System.Drawing.Color.Navy;
             this.searchUrl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchUrl.Image = ((System.Drawing.Image)(resources.GetObject("searchUrl.Image")));
             this.searchUrl.Location = new System.Drawing.Point(691, 114);
@@ -215,7 +221,10 @@ namespace Launch_Epic_Games_with_Steam
             this.bckPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bckPanel.Controls.Add(this.tutorialButton);
+            this.bckPanel.Controls.Add(this.searchExe);
             this.bckPanel.Controls.Add(this.segundosLabel);
+            this.bckPanel.Controls.Add(this.pictureBox5);
             this.bckPanel.Controls.Add(this.timeToWaitLabel);
             this.bckPanel.Controls.Add(this.debugBox);
             this.bckPanel.Controls.Add(this.pictureBox4);
@@ -226,6 +235,18 @@ namespace Launch_Epic_Games_with_Steam
             this.bckPanel.Name = "bckPanel";
             this.bckPanel.Size = new System.Drawing.Size(776, 434);
             this.bckPanel.TabIndex = 11;
+            // 
+            // tutorialButton
+            // 
+            this.tutorialButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tutorialButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tutorialButton.Image = ((System.Drawing.Image)(resources.GetObject("tutorialButton.Image")));
+            this.tutorialButton.Location = new System.Drawing.Point(736, 43);
+            this.tutorialButton.Name = "tutorialButton";
+            this.tutorialButton.Size = new System.Drawing.Size(39, 37);
+            this.tutorialButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.tutorialButton.TabIndex = 9;
+            this.tutorialButton.TabStop = false;
             // 
             // segundosLabel
             // 
@@ -278,9 +299,9 @@ namespace Launch_Epic_Games_with_Steam
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(722, 0);
+            this.pictureBox6.Location = new System.Drawing.Point(736, 0);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox6.Size = new System.Drawing.Size(39, 37);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -294,8 +315,6 @@ namespace Launch_Epic_Games_with_Steam
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.searchUrl);
-            this.Controls.Add(this.searchExe);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -309,6 +328,8 @@ namespace Launch_Epic_Games_with_Steam
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Open a Game (Epic Games) with Steam";
             this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.VisibleChanged += new System.EventHandler(this.Form1_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -318,6 +339,7 @@ namespace Launch_Epic_Games_with_Steam
             ((System.ComponentModel.ISupportInitialize)(this.searchUrl)).EndInit();
             this.bckPanel.ResumeLayout(false);
             this.bckPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tutorialButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,16 +348,13 @@ namespace Launch_Epic_Games_with_Steam
 
         #endregion
         private System.Windows.Forms.TextBox exeName;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.OpenFileDialog openExeFile;
-        private System.Windows.Forms.PictureBox searchExe;
         public System.Windows.Forms.TextBox debugBox;
-        private System.Windows.Forms.PictureBox searchUrl;
         private System.Windows.Forms.OpenFileDialog openInkFile;
         public System.Windows.Forms.TextBox epicUrl;
         private System.Windows.Forms.Panel bckPanel;
@@ -344,6 +363,10 @@ namespace Launch_Epic_Games_with_Steam
         private System.Windows.Forms.TextBox timeBox;
         private System.Windows.Forms.Label timeToWaitLabel;
         private System.Windows.Forms.Label segundosLabel;
+        internal System.Windows.Forms.PictureBox searchUrl;
+        internal System.Windows.Forms.PictureBox searchExe;
+        internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.PictureBox tutorialButton;
     }
 }
 
