@@ -1,4 +1,5 @@
 # Launch Epic Games with Steam
+### PROJETO DESCONTINUADO!
 
 **Launch Epic Games with Steam** é um software que cria atalhos dos jogos baixados pela epic games.
 Estes atalhos gerados são linkados em um launcher dentro de uma pasta personalizada de cada jogo.
